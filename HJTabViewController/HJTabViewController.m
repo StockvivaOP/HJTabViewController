@@ -417,6 +417,10 @@
     }
     [self enableCurScrollViewScrollToTop:YES];
     [self viewDidScrollToIndex:self.curIndex];
+    
+    if (_tabHeaderView.frame.origin.y > 0 && _isHeaderViewUnlocked) {
+        _tabHeaderView.frame = CGRectMake(0, 0, _tabHeaderView.frame.size.width, _tabHeaderView.frame.size.height);
+    }
 }
 
 - (void)viewDidScrollToIndex:(NSInteger)index {
