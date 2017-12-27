@@ -50,6 +50,8 @@
 
 @property (nonatomic, readonly)  NSInteger       curIndex;
 
+@property (nonatomic, assign) BOOL isHeaderViewUnlocked;
+
 - (void)scrollToIndex:(NSInteger)index animated:(BOOL)animated;
 
 - (UIViewController *)viewControllerForIndex:(NSInteger)index;
