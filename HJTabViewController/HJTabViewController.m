@@ -343,7 +343,7 @@
         return;
     }
     CGRect headRect = self.tabHeaderView.frame;
-    if (_contentOffsetY > -_headParameter.headHeight) {
+    if (_contentOffsetY > -_headParameter.headHeight || _isHeaderViewUnlocked) {
         headRect.size.height = _headParameter.headHeight;
         headRect.origin.y += disY;
         headRect.origin.y = MIN(CGRectGetMinY(headRect), 0);
