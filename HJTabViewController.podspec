@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HJTabViewController"
-  s.version      = "1.0.6"
+  s.version      = "1.0.7"
   s.summary      = "A Cool PageViewController"
 
   # This description is used to generate tags and improve search results.
