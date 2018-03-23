@@ -32,10 +32,6 @@
             if ([subview isKindOfClass:[UIScrollView class]] && CGSizeEqualToSize(subview.frame.size, self.view.frame.size)) {
                 [self setTabContentScrollView:subview];
                 break;
-            }else if ([subview isKindOfClass:[UIWebView class]]) {
-                UIWebView* webView = (UIWebView*) subview;
-                [self setTabContentScrollView:webView.scrollView];
-                break;
             }
         }
     }
