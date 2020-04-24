@@ -8,6 +8,7 @@
 
 #import "HJTabViewController+ViewController.h"
 #import <objc/runtime.h>
+#import <WebKit/WebKit.h>
 
 @implementation UIViewController (tabViewController)
 @dynamic tabViewController, tabContentScrollView;
@@ -32,8 +33,8 @@
             if ([subview isKindOfClass:[UIScrollView class]] && CGSizeEqualToSize(subview.frame.size, self.view.frame.size)) {
                 [self setTabContentScrollView:subview];
                 break;
-            }else if ([subview isKindOfClass:[UIWebView class]]) {
-                UIWebView* webView = (UIWebView*) subview;
+            }else if ([subview isKindOfClass:[WKWebView class]]) {
+                WKWebView* webView = (WKWebView*) subview;
                 [self setTabContentScrollView:webView.scrollView];
                 break;
             }
